@@ -11,6 +11,7 @@
 int main(int argc, char *argv[]) {
     Node* head = NULL;  // Start with an empty list
     char choice;
+    readFromFile(&head);
 
     printf("\n***************************************\n\n");
 
@@ -49,6 +50,8 @@ int main(int argc, char *argv[]) {
                 printf("Invalid choice, please try again.\n"); //Lets the user know that they did not enter a listed number (0-4)
         }
     } while (choice != '4');
+
+    writeToFile(head);
 
     return 0;  // Exit status of the program
 }
