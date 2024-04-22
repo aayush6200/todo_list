@@ -6,6 +6,8 @@
 #include "read_task.h"
 #include "delete_task.h"
 #include "update_task.h"
+#include "readFromFile.h"
+#include "writeToFile.h"
 
 // void updateTasks(Node** head); // Assuming this function is defined elsewhere
 int main(int argc, char *argv[]) {
