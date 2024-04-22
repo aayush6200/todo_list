@@ -71,7 +71,7 @@ void getUserInput(Node** head) {
         if (choice == 1) {
             char date[25], time[25], task[256];
 
-            printf("Enter the date (YYYY-MM-DD): ");
+            printf("\nEnter the date (YYYY-MM-DD): ");
             scanf("%s", date); // Read date
             getchar(); // Consume the newline
 
@@ -85,9 +85,12 @@ void getUserInput(Node** head) {
 
             if (isValidDate(date) && isValidTime(time) && strlen(task) > 0) {
                 addTask(head, date, time, task);
+                printf("\n\tTask has been added.");
             } else {
                 printf("Invalid input. Please ensure the date, time, and task description are correct.\n");
             }
+
+            
         } else if (choice == 0) {
             break; // Exit the loop and function
         } else {
