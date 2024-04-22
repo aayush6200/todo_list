@@ -12,19 +12,21 @@ int main(int argc, char *argv[]) {
     Node* head = NULL;  // Start with an empty list
     char choice;
 
+    printf("\n***************************************\n\n");
+
     printf("Welcome to the ToDo List Application!\n");
 
     do {
-        printf("\n\n******************************\n\n");
-        printf("Select an option:\n");
-        printf("0 - Add Task\n");
-        printf("1 - Update Task\n");
-        printf("2 - List Tasks \n");
-        printf("3 - Delete Task\n");
-        printf("4 - Exit\n");
-        printf("Enter your choice: ");
+        printf("\n\n***************************************\n\n");
+        printf("\tSelect an option:\n\n");
+        printf("\t0 - Add Task\n");
+        printf("\t1 - Update Task\n");
+        printf("\t2 - List Tasks \n");
+        printf("\t3 - Delete Task\n");
+        printf("\t4 - Exit\n\n");
+        printf("\tEnter your choice: ");
         scanf(" %c", &choice);
-        printf("\n\n******************************\n\n");
+        printf("\n\n***************************************\n\n");
 
         switch (choice) {
             case '0':
@@ -34,14 +36,14 @@ int main(int argc, char *argv[]) {
                 update_task(&head);     // Update tasks, assuming function is defined
                 break;
             case '2':
-                printf("\nlisting tasks. \n");  //Lists tasks
+                printf("\n\tListing tasks. \n");  //Lists tasks
                 read_tasks(head);
                 break;
             case '3':
                 delete_task(&head);     //Deletes task
                 break;
             case '4':
-                printf("exiting application\n\n"); //Tells the user that the app is exiting
+                printf("Exiting application\n\n"); //Tells the user that the app is exiting
                 break;
             default:
                 printf("Invalid choice, please try again.\n"); //Lets the user know that they did not enter a listed number (0-4)
