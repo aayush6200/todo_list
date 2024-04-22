@@ -8,7 +8,7 @@ void readFromFile(Node** head)
 {
     FILE* data;
     int charId;
-    char directory[256], filename[] = "\\saveData.txt", char date[25], time[25], task[256];
+    char directory[256], filename[] = "\\saveData.txt", date[25], time[25], task[256];
 
     getcwd(directory, 256); //Gets the current directory
     strcat(directory, filename); //Appends the filename to the end of the directory link
@@ -20,8 +20,6 @@ void readFromFile(Node** head)
         printf("Could not open save file.");
         exit(1);
     }
-
-    int charId;
 
     //Reads the tasks from the txt file and puts them into the link list (changes charId to make the list look clean)
     while(fscanf(data, "%d %s %s %99[^\n]", &charId, date, time, task) != EOF)
